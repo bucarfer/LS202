@@ -1,0 +1,57 @@
+<img src="https://d3jtzah944tvom.cloudfront.net/lesson_2/exercises_dimension_and_spacing/H%C3%B4tel_des_Invalides_-_20150801_16h09_%2810630%29.jpg"
+    alt="Demonstration of image sizing">
+
+<!-- 1. Use CSS to set a fixed width on the image of 800 pixels, and center it in the window horizontally. -->
+
+img {
+    dipslay:block;
+    margin:0 auto;
+    width: 800px;
+}
+
+<!-- 2. Using the code from the previous problem, change the width property for img to 100%, and set the max-width property to 800px. The image should expand to fit any container width up to 800 pixels. Resize your browser width and watch how that affects the photograph. -->
+
+img {
+    dipslay:block;
+    margin:0 auto;
+    max-width: 800px;
+    width: 100%;
+}
+
+<!-- 3. Using the code from the previous problem, set a fixed height on the image of 533 pixels. Resize the browser window and watch how the image dimensions change. -->
+ <!-- 4. As you can see, having a variable size for one dimension and fixed for the other makes for a container with strange behavior: this one stretches horizontally but remains fixed vertically. Remove the height and update the CSS to ensure the width does not get smaller than 500 pixels. -->
+
+img {
+    dipslay:block;
+    margin:0 auto;
+    max-width: 800px;
+    min-width: 500px;
+    width: 100%;
+}
+
+<!-- 5. Create a new HTML page with two consecutive div elements. Make each a fixed width and height of 300 pixels. Set the background color on the first div to "#fcc" (red) and the second to "#ccf" (blue). -->
+<!-- 6. Add a 5-pixel solid black border to the blue div. Compare the widths of the two boxes. Why is the blue box a different size? -->
+<!-- 7. Add 20 pixels padding to all four sides of the red div. Notice the different widths again. Add a CSS property to both elements to ensure the total width for each is 300px rather than 300px and then some. -->
+
+
+<div class="first_div"></div>
+<div class="second_div"></div>
+
+div {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 300px;
+    height: 300px;
+    margin-right: 20px
+}
+
+#first_div {
+
+    border: 5px solid black;
+    color: #fcc;
+}
+
+#second_div {
+    padding:20px;
+    color: #ccf;
+}

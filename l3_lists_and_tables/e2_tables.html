@@ -1,0 +1,176 @@
+<!-- 1. Create a table with column headings for "Product," "Quantity," and "Price." Fill the table with this data: -->
+<!-- 2. Update your solution to the previous problem to make the background color of the entire table cyan. -->
+<!-- 3. Update your solution to the previous problem to make the background color of the individual data cells orange. -->
+ <!-- 4. The background color of the table in the previous problem bleeds through as a border around the data cells. Update your solution to remove that border. -->
+<!-- 5. Update your solution to the previous problem to change the background color for the Banana and Kiwi rows to yellow. -->
+
+<head>
+    <style>
+        table {
+            background-color: cyan;
+            border-collapse: collapse;
+        }
+
+        tbody tr:nth-child(2n + 1) {
+            background-color: orange;
+        }
+
+        tbody tr:nth-child(2n + 2) {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<table>
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>Apple</td>
+          <td>34</td>
+          <td>$3.99/lb</td>
+        </tr>
+        <tr>
+          <td>Banana</td>
+          <td>116</td>
+          <td>$1.69/lb</td>
+        </tr>
+        <tr>
+          <td>Carrot</td>
+          <td>42</td>
+          <td>$2.49/lb</td>
+        </tr>
+        <tr>
+          <td>Kiwi</td>
+          <td>18</td>
+          <td>$0.69 ea.</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- 6. Create a table with both column and row headings. Use "Name," "Major," and "GPA" for the columns, and student names for the rows. Be sure to tell the browser which headings are for columns and which are for rows. -->
+<!-- 7. Without adding anything to the HTML, update the solution to the previous problem to set the column headings to green, and the row headings to blue. -->
+
+<head>
+    <style>
+        [scope="col"]  {
+            background-color: green;
+        }
+
+        [scope="row"] {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<table>
+    <thead>
+        <th scope="col">Name</th>
+        <th scope="col">Major</th>
+        <th scope="col">GPA</th>
+    </thead>
+
+    <tbody>
+        <tr>
+            <th scope="row">Chris Lee</th>
+            <td>Supply Chain Management</td>
+            <td>3.7</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Shane Riley</th>
+            <td>Photojournalism</td>
+            <td>3.8</td>
+        </tr>
+
+        <tr>
+            <th scope="row">Kevin Wang</th>
+            <td>Computer Science</td>
+            <td>4.0</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- 8. For this table, our data has categories to create subsets of data within the same table. We need "Type," "Name," and "Price" column headings. Each row represents one of three different wine types. All rows that share a wine type should use the same row heading. Your result should look like the image below. -->
+<!-- 9. It's difficult to tell which wines apply to each type in the output of the previous problem. Update your solution to display a 1-pixel wide gray border around all the table's cells and headings. -->
+
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+        td, th  {
+            border-color: gray;
+            border-width: 1px;
+            border-style: solid;
+            /* border: 1px solid gray; #alternative in one line */
+        }
+    </style>
+</head>
+
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Type</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- first group of 3 rows -->
+    <tr>
+      <th scope="row" rowspan="3">Red</th>
+      <td>Meiomi Pinot Noir</td>
+      <td>$17.99</td>
+    </tr>
+
+    <tr>
+      <td>Radius Cabernet</td>
+      <td>$9.99</td>
+    </tr>
+
+    <tr>
+      <td>Apothic Red</td>
+      <td>$7.97</td>
+    </tr>
+
+    <!-- second group of 3 rows -->
+    <tr>
+      <th scope="row" rowspan="3">White</th>
+      <td>Cloud Break Chardonnay</td>
+      <td>$8.99</td>
+    </tr>
+
+    <tr>
+      <td>Kendall Jackson Chardonnay</td>
+      <td>$9.97</td>
+    </tr>
+
+    <tr>
+      <td>Kim Crawford Sauvignon Blanc</td>
+      <td>$9.97</td>
+    </tr>
+
+    <!-- third group of 3 rows -->
+    <tr>
+      <th scope="row" rowspan="3">Sake</th>
+      <td>Gekkeikan Sake</td>
+      <td>$9.99</td>
+    </tr>
+
+    <tr>
+      <td>Mura Mura Mountain Sake</td>
+      <td>$15.99</td>
+    </tr>
+
+    <tr>
+      <td>TY KU Sake Junmai Ginjo Black</td>
+      <td>$21.99</td>
+    </tr>
+  </tbody>
+</table>

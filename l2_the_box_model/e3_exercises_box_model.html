@@ -1,0 +1,89 @@
+<!-- 1. Given the code below, what is the minimum width and height (in pixels) that the div needs to entirely contain the img element (including its margins)? -->
+
+<div>
+  <img src="#" alt="test">
+</div>
+
+<display>
+  div {
+  background-color: lightgray;
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: 4px solid red;
+  box-sizing: content-box;
+  display: inline-block;
+  height: 300px;
+  margin: 20px 19px 10px 11px;
+  padding: 10px 20px;
+  width: 500px;
+}
+</display>
+
+<!-- Solution
+Since the img has display: inline-block, we can compute the dimensions directly from the CSS properties. The div element needs 580 pixels horizontally:
+
+500 pixels for the width
+8 pixels for the left and right borders
+40 pixels for the left and right padding
+11 pixels for the left margin
+19 pixels for the right margin
+2 pixels for the left and right borders of the div
+The div needs 360 pixels vertically:
+
+300 pixels for the height
+8 pixels for the top and bottom borders
+20 pixels for the top and bottom padding
+20 pixels for the top margin
+10 pixels for the bottom margin
+2 pixels for the top and bottom borders of the div
+Since the div uses border-box box-sizing, it must have a width and height of at least 580px and 360px, respectively. -->
+
+<!-- 6. Will the following code display the two article boxes side by side? If not, why not? How would you fix it so that it places the boxes side by side? -->
+
+<section>
+  <article>content</article><article>more content</article>
+</section>
+
+section {
+  background-color: yellow;
+  border: 1px solid red;
+  box-sizing: content-box;
+  display: inline-block;
+  height: 400px;
+  margin: 0;
+  padding: 20px;
+  width: 900px;
+}
+
+article {
+  background-color: lime;
+  border: 1px solid blue;
+  height: 100%;
+  margin: 0;
+  padding: 10px;
+  width: 50%;
+}
+
+<!-- Solution
+The browser won't display the article boxes side by side since they are block elements. Even if we could place the block elements side by side, they won't fit inside the section because the total width of each article is 50% of the width plus 22 pixels for its padding and border.
+
+The first change we must make is to add display: inline-block; to the CSS article selector, which lets us position two or more articles side by side, provided there is room. To make them fit, we must set the actual width (including padding and the border) to 50% of the available space, so we also add box-sizing: border-box; to the article selector.
+
+Copy Code
+article {
+  background-color: lime;
+  border: 1px solid blue;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 100%;
+  margin: 0;
+  padding: 10px;
+  width: 50%;
+}
+Now both article boxes appear inside the section box, side by side. -->

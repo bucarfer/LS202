@@ -1,0 +1,32 @@
+<!--1.  Which of these tags are semantic, and which are not?
+
+<!-- SOLUTION:
+ semantic -->
+ <article></article>
+ <aside> <b>
+ <footer></footer>
+ <h3>	<header>	<section></section>
+<strong></strong>
+
+<!-- non semantic -->
+ <div></div>
+ <span></span>
+
+ <!-- 2.Given the following HTML, would <section>, <aside>, <article>, or <div> be the most appropriate element for the tag shown as <sometag>? -->
+
+Based on what we see here, an <article> may be the best choice since Abraham Lincoln's Gettysburg Address would make sense if we extracted it from the page and put it elsewhere. That is, it's self-contained and reusable.
+
+However, semantics depend on context and intent, so whether we treat the Gettysburg address as an <article> or <section> or <aside> may vary from one page to another.
+
+ <!-- 3. Given the HTML from question 2, would it be appropriate to replace <sometag> with <address> or <blockquote>? If so, which one? -->
+
+<blockquote> marks a block of text as a quotation from another source.
+The best solution may be to replace sometag with blockquote, then wrap the entire <blockquote> in an <article></article>
+
+<!-- 4. Given the following HTML, would <section>, <aside>, <article>, or <div> be the most appropriate element for the tag shown as <sometag>? -->
+
+This time, a <section> tag may be the best choice. The text appears to be part of a larger body of work, but it isn't a standalone block like an article. It's also not an aside since it appears to be part of the main document flow.
+
+As with question 2, semantics depend on content and intent. Thus, it may be possible to argue for a different answer to this question.
+
+<!-- 5. Given the following HTML, would <aside>, <section>, <blockquote>, or <div> be the most appropriate element for the tag shown as <sometag>? -->
